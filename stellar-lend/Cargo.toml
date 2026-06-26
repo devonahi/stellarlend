@@ -20,6 +20,9 @@ members = [
   "contracts/stealth-address",
   "contracts/privacy-pool",
   "contracts/reputation-system",
+  "contracts/copy-lending",
+  "contracts/dispute-resolution",
+  "contracts/credit-delegation",
 ]
 exclude = ["fuzz"]
 

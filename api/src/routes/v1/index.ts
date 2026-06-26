@@ -9,6 +9,10 @@
  *   /api/v1/account     -> user account domain
  *   /api/v1/system      -> infrastructure domain
  *   /api/v1/security    -> security/privacy domain
+ *   /api/v1/social      -> social trading domain
+ *   /api/v1/notifications -> notification domain
+ *   /api/v1/disputes    -> dispute resolution domain
+ *   /api/v1/credit      -> credit delegation domain
  */
 
 import { Router } from 'express';
@@ -19,6 +23,10 @@ import oracleV1Routes from './oracle';
 import accountV1Routes from './account';
 import systemV1Routes from './system';
 import securityV1Routes from './security';
+import socialRoutes from '../social.routes';
+import notificationRoutes from '../notification.routes';
+import disputeRoutes from '../dispute.routes';
+import creditRoutes from '../credit.routes';
 
 const router = Router();
 
@@ -29,5 +37,9 @@ router.use('/oracle', oracleV1Routes);
 router.use('/account', accountV1Routes);
 router.use('/system', systemV1Routes);
 router.use('/security', securityV1Routes);
+router.use('/social', socialRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/disputes', disputeRoutes);
+router.use('/credit', creditRoutes);
 
 export default router;

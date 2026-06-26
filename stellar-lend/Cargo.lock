@@ -2775,6 +2775,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "stellarlend-copy-lending"
+version = "0.1.0"
+dependencies = [
+ "soroban-sdk",
+ "stellarlend-common",
+]
+
+[[package]]
+name = "stellarlend-credit-delegation"
+version = "0.1.0"
+dependencies = [
+ "soroban-sdk",
+ "stellarlend-common",
+]
+
+[[package]]
+name = "stellarlend-dispute-resolution"
+version = "0.1.0"
+dependencies = [
+ "soroban-sdk",
+ "stellarlend-common",
+]
+
+[[package]]
 name = "stellarlend-institutional-wallet"
 version = "0.1.0"
 dependencies = [
