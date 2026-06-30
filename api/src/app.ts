@@ -30,6 +30,7 @@ import disputeRoutes from './routes/dispute.routes';
 import creditRoutes from './routes/credit.routes';
 import nonceRoutes from './routes/nonce.routes';
 
+import compression from 'compression';
 import { errorHandler } from './middleware/errorHandler';
 import { idempotencyMiddleware } from './middleware/idempotency';
 import { resetSensitiveRateLimits, sensitiveOperationRateLimiter } from './middleware/rate-limit';
@@ -59,6 +60,15 @@ app.use(
       includeSubDomains: true,
       preload: true,
     },
+  })
+);
+
+// Compress responses (gzip/deflate/br) when the client supports it.
+// `threshold` skips compressing tiny responses where the gzip overhead
+// would outweigh the bandwidth savings.
+app.use(
+  compression({
+    threshold: 1024, // don't bother compressing responses under 1KB
   })
 );
 
