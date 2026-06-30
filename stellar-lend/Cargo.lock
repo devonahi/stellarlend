@@ -2902,6 +2902,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "stellarlend-migration-tests"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "rand 0.8.5",
+ "serde",
+ "serde_json",
+ "soroban-sdk",
+]
+
+[[package]]
 name = "stellarlend-oracle-client"
 version = "0.1.0"
 dependencies = [
